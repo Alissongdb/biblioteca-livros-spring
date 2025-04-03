@@ -1,15 +1,15 @@
 package com.alisson.biblioteca_de_livros.domain.usuario;
 
+import com.alisson.biblioteca_de_livros.domain.livro.LivroRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
+    private final LivroRepository livroRepository;
 
     public Usuario criarUsuario(Usuario usuario) {
         return usuarioRepository.save(usuario);
